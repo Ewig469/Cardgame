@@ -26,5 +26,13 @@ public class Battlefeld {
 
     public void addCard(int x, int y, Card card){
         matrix.get(x-1).set(y-1, card);
+        card.setPosX(x-1);
+        card.setPosY(y-1);
+    }
+
+    public void moveCard(Card card, int direction){
+        matrix.get(card.getPosX()).set(card.getPosY(), null);
+        card.move(direction);
+        matrix.get(card.getPosX()).set(card.getPosY(), card);
     }
 }

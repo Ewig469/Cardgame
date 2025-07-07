@@ -3,8 +3,9 @@ public class Card {
     private int attack;
     private int health;
     private int move;
-    int posX;
-    int posY;
+    private int posX;
+    private int posY;
+    private Battlefeld bf;
 
     public Card(String name, int attack, int health, int move){
         this.name = name;
@@ -44,6 +45,44 @@ public class Card {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+
+//    boolean canMove(){
+//        if(posX - move < 0 || posX + move > 4)
+//    }
+
+    public void move(int direction){
+        if(direction == 0){ //上
+            posX -= move;
+        }
+
+        if(direction == 1){ //下
+            posX += move;
+        }
+
+        if(direction == 2){ //左
+            posY -= move;
+        }
+
+        if(direction == 3){ //右
+            posY += move;
+        }
     }
 
     @Override

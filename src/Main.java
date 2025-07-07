@@ -7,5 +7,8 @@ public class Main {
         Battlefeld b1 = new Battlefeld();
         b1.addCard(8, 3, card1);
         b1.printBattlefeld();
+        System.out.println((card1.getPosY() + 1) + " " + (card1.getPosX() + 1));
+        b1.moveCard(card1, 0);
+        b1.printBattlefeld();
     }
 }
