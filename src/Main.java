@@ -5,6 +5,7 @@ public class Main {
         System.out.println(card1);
 
         Battlefeld b1 = new Battlefeld();
+        b1.addCard(8, 3, card1);
         b1.printBattlefeld();
     }
 }

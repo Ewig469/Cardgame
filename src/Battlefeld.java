@@ -24,5 +24,7 @@ public class Battlefeld {
         }
     }
 
-    public addCard
+    public void addCard(int x, int y, Card card){
+        matrix.get(x-1).set(y-1, card);
+    }
 }
