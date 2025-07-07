@@ -69,24 +69,25 @@ public class Card {
 
     public void move(int direction){
         if(direction == 0){ //上
-            posX -= move;
-        }
-
-        if(direction == 1){ //下
-            posX += move;
-        }
-
-        if(direction == 2){ //左
             posY -= move;
         }
 
-        if(direction == 3){ //右
+        if(direction == 1){ //下
             posY += move;
+        }
+
+        if(direction == 2){ //左
+            posX -= move;
+        }
+
+        if(direction == 3){ //右
+            posX += move;
         }
     }
 
     @Override
     public String toString() {
-        return "卡牌名称：" + name + " 攻击力：" + attack + " 生命值：" + health + " 步数：" + move;
+//        return "卡牌名称：" + name + " 攻击力：" + attack + " 生命值：" + health + " 步数：" + move;
+        return name;
     }
 }
